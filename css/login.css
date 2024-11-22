@@ -1,0 +1,164 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 60px 40px 40px; /* Top Right Bottom Left padding */
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading Styling */
+.login-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Label Styling */
+label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #444;
+    align-self: flex-start;
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="password"],
+button {
+    width: 100%; /* Ensure inputs and button take the full width */
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Input Field Styling */
+input[type="text"],
+input[type="password"] {
+    border: 2px solid #ddd;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #5e72e4;
+    background-color: #ffffff;
+}
+
+/* Button Styling */
+button {
+    color: #fff;
+    background-color: #5e72e4;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width:450px;
+}
+
+button:hover {
+    background-color: #4c63d2;
+    transform: scale(1.05);
+}
+
+/* Error Message Styling */
+.error {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Register Link Styling */
+.register-link {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.register-link a {
+    color: #5e72e4;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #2e3d87;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-icon {
+    align-self: flex-start; /* Align the icon to the start of the flex container */
+    margin-bottom: 20px; /* Space between icon and form */
+    text-align: left; /* Align text to the left */
+}
+.back-icon img {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 450px;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Make space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.toggle-password:hover {
+    color: #333;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Use register-specific CSS -->
+</head>
+<body>
+    <header>
+        <h1>Register to Vote</h1>
+    </header>
+
+    <div class="container">
+        <?php if (isset($error)) : ?>
+            <p class="alert"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form action="register.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <?php include 'footer.html'; ?>
+</body>
+</html>

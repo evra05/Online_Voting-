@@ -1,0 +1,144 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Modern Menu Container */
+.menu-container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Welcome Section */
+.welcome-section {
+    flex: 1;
+    background-color: #ffffff;
+    color: #444;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: outset 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Menu Options */
+.menu-options {
+    flex: 1.5;
+    padding: 30px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-options h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.menu-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-options ul li {
+    width: 100%;
+}
+
+.menu-options ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-options ul li a:hover {
+    background-color: #555;
+}
+
+.menu-options ul li a.logout {
+    background-color: #e74c3c;
+}
+
+.menu-options ul li a.logout:hover {
+    background-color: #c0392b;
+}
+
+/* Welcome Page Buttons */
+.actions .button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    background-color: #007bff; /* Default blue for Login */
+    border-radius: 8px;
+    margin: 10px; /* Adds spacing between buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.actions .button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+.actions .register {
+    background-color: #28a745; /* Green for Register */
+}
+
+.actions .register:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,201 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px; /* Sidebar width */
+    padding: 20px;
+    position: fixed; /* Fixed position to stay on the left */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the sidebar is above the content */
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Sidebar link styling */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+/* Sidebar link styling */
+.sidebar ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+/* Hover effect for sidebar links */
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Active link style */
+.sidebar ul li a.active {
+    background-color: #2980b9;
+    font-weight: bold;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 260px; /* Sidebar space */
+    padding: 40px;
+    background-color: #ecf0f1;
+    color: #333;
+    width: calc(100% - 260px); /* Ensure content takes up remaining width */
+    overflow-y: auto; /* Allow scrolling if content is long */
+}
+
+h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+
+/* Form styles */
+form {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Candidate list styling */
+ul.candidate-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.candidate-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove button styling */
+ul.candidate-list li a.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+ul.candidate-list li a.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Table styling for Voting Results */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,213 @@
+/* Basic Reset and Setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: flex-start; /* Align items at the top */
+    padding-top: 0px; /* Ensure there’s space from the top */
+}
+
+/* Voting Container */
+.vote-container {
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0; /* Ensures no top margin */
+}
+/* Heading Style */
+.vote-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    padding-top: 10px; /* Padding to ensure the heading isn't too close to the top */
+}
+
+/* Form Styling */
+.vote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.candidates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Candidate Card Styling */
+.candidate-card {
+    background-color: #fff;
+    padding: 40px;  /* Increase padding for more space inside the card */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space between cards */
+    text-align: center; /* Center content inside each card */
+}
+
+
+
+/* Candidate Image Styling */
+.candidate-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Candidate Info Styling */
+.candidate-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.candidate-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.candidate-faculty {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 10px;
+}
+
+.candidate-manifesto {
+    background-color: #f3e5f5; /* Light purple background */
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 10px;
+    white-space: pre-wrap; /* Preserve whitespace and newlines */
+}
+
+/* Text Styling */
+.candidate-faculty p, .candidate-manifesto p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.candidate-faculty strong, .candidate-manifesto strong {
+    color: #555;
+}
+
+
+
+/* Vote Button Styling */
+.vote-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.vote-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Message Styling */
+.message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 8px;
+    z-index: 9999;
+    display: none;
+}
+
+/* Success Message Styling */
+.success {
+    background-color: #28a745;
+}
+
+/* Error Message Styling */
+.error {
+    background-color: #e74c3c;
+}
+
+/* Show the message */
+.message {
+    display: block;
+}
+
+/* Menu button container */
+.menu-button {
+    text-align: center;
+    margin-top: 30px;  /* Add spacing at the top */
+}
+
+/* Button styling */
+.menu-button .button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2ecc71;  /* Green background */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+/* Button hover effect */
+.menu-button .button:hover {
+    background-color: #27ae60;  /* Darker green on hover */
+    transform: scale(1.05);  /* Slightly enlarge the button */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);  /* Add more shadow on hover */
+}
+
+/* Button focus effect */
+.menu-button .button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, 0.5);  /* Light green focus ring */
+}

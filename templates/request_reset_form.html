@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Password Reset</title>
+    <link rel="stylesheet" href="/online_voting/css/styles.css"> <!-- Absolute path to CSS -->
+</head>
+<body>
+    <header>
+        <h1>Forgot Your Password?</h1>
+    </header>
+
+    <div class="container">
+        <?php if (isset($message)) : ?>
+            <p class="alert success"><?php echo $message; ?></p>
+        <?php elseif (isset($error)) : ?>
+            <p class="alert"><?php echo $error; ?></p>
+        <?php endif; ?>
+
+        <form action="../request_reset.php" method="POST">
+            <label for="email">Enter your email:</label>
+            <input type="email" name="email" id="email" required>
+            <button type="submit">Send Reset Link</button>
+        </form>
+    </div>
+
+    <?php include 'footer.html'; ?>
+</body>
+</html>

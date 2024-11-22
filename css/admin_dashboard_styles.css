@@ -1,0 +1,412 @@
+/* General body and container styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Remove all bullets and list-style artifacts */
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the sidebar and main content */
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    width: 250px; /* Sidebar width */
+    padding: 20px;
+    position: fixed; /* Fixed position to stay on the left */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the sidebar is above the content */
+}
+
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Sidebar link styling */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+/* Sidebar link styling */
+.sidebar ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+/* Hover effect for sidebar links */
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+/* Active link style */
+.sidebar ul li a.active {
+    background-color: #2980b9;
+    font-weight: bold;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 260px; /* Sidebar space */
+    padding: 40px;
+    background-color: #ecf0f1;
+    color: #333;
+    width: calc(100% - 260px); /* Ensure content takes up remaining width */
+    overflow-y: auto; /* Allow scrolling if content is long */
+}
+
+/* Page title */
+h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* General form styles */
+.modern-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modern-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+    resize: none;
+}
+
+/* Modern file upload styling */
+.file-upload-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Hide the default file input but make it clickable */
+input[type="file"] {
+    position: absolute;
+    opacity: 0; /* Make the file input invisible */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* When a file is selected, update the label */
+input[type="file"]:valid + .custom-file-label {
+    background-color: #28a745; /* Green background when file is selected */
+    color: white; /* White text */
+    border-color: #28a745; /* Match the border color */
+}
+
+/* Optional: Customize the file input's label */
+.custom-file-label {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+/* Styling for when the user hovers over the label */
+.custom-file-label:hover {
+    background-color: #dfe6e9;
+    color: #333;
+}
+
+/* Optional: Add focus effect for better accessibility */
+.custom-file-label:focus {
+    outline: none;
+    border-color: #007bff; /* Blue outline for focus state */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Submit button styling */
+.submit-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    transform: scale(1.02);
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4);
+}
+
+
+
+.candidate-actions {
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-left: auto; /* Push buttons to the right */
+}
+
+/* Reset list styles */
+.candidate-list {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset parent container styles */
+.candidate-actions form {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove padding */
+    background: none; /* Remove background color */
+    box-shadow: none; /* Ensure no shadow */
+    border: none; /* Remove borders */
+}
+
+.candidate-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9; /* Light background for each item */
+    border: 1px solid #ddd; /* Border for each candidate box */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+}
+
+/* Candidate name styling */
+.candidate-name {
+    font-size: 1.5rem; /* Larger font size for the name */
+    font-weight: bold;
+    color: #2c3e50; /* Darker text for visibility */
+}
+
+/* Actions container */
+.candidate-actions {
+    display: flex; /* Align buttons horizontally */
+    gap: 15px; /* Space between buttons */
+}
+/* Style for buttons */
+.remove-button, .edit-button {
+    padding: 15px 30px; /* Larger padding for bigger buttons */
+    font-size: 1.2rem; /* Larger font size */
+    border: none;
+    border-radius: 8px; /* Slightly more rounded corners */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Specific styling for Remove button */
+.remove-button {
+    background-color: #e74c3c; /* Red color */
+    color: white;
+}
+
+.remove-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Specific styling for Edit button */
+.edit-button {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    text-decoration: none;
+}
+
+.edit-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Table styling for Voting Results */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Cropper Modal */
+#cropperModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+#cropperModal img {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+/* Success and error messages */
+.alert {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.success {
+    background-color: #4CAF50;
+    color: white;
+}
+.error {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar ul li a {
+        padding: 10px;
+    }
+}
+
+input[type="file"] {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.success-message {
+    display: none; /* Initially hidden */
+    background-color: #4CAF50; /* Green color for success */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0; /* Invisible by default */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Bring it into view */
+}
+

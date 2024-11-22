@@ -1,0 +1,29 @@
+<footer class="footer">
+    <p>&copy; <span id="currentYear"></span> Online Voting System</p>
+</footer>
+
+<style>
+/* Footer Styling */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    position: fixed; /* Keep footer at the bottom */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Ensure body margin allows room for the footer */
+body {
+    margin-bottom: 60px; /* Adjust based on footer height */
+}
+</style>
+
+<script>
+// Dynamically set the current year in the footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>

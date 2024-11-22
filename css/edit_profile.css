@@ -1,0 +1,115 @@
+/* Reset some basic styles */
+body, h1, p, form {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body background and general styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Center the content and add spacing */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form container styling */
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form input fields and labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Error and success message styling */
+p {
+    text-align: center;
+    font-size: 14px;
+}
+
+p[style*="color: red;"] {
+    color: #e74c3c;
+}
+
+p[style*="color: green;"] {
+    color: #2ecc71;
+}
+
+/* Read-only input styling */
+input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Back button container */
+.back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;  /* Blue background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #2980b9;  /* Darker blue on hover */
+    transform: scale(1.05);  /* Slightly enlarge the button */
+}
+
+/* Button focus effect */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.6);  /* Light blue focus ring */
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote</title>
+    <link rel="stylesheet" href="/css/vote.css"> <!-- Absolute path to CSS -->
+</head>
+<body>
+    <header>
+        <h1>Vote for Your Candidate</h1>
+    </header>
+
+    <div class="container">
+        <?php if (isset($message)) : ?>
+            <p class="alert success"><?php echo $message; ?></p>
+        <?php endif; ?>
+
+        <form action="../vote.php" method="POST">
+            <?php foreach ($candidates as $candidate): ?>
+                <div class="radio-label">
+                    <input type="radio" name="candidate_id" value="<?php echo $candidate['candidate_id']; ?>" required>
+                    <label><?php echo htmlspecialchars($candidate['name']); ?></label>
+                </div>
+            <?php endforeach; ?>
+            <button type="submit">Submit Vote</button>
+        </form>
+    </div>
+
+    <?php include 'footer.html'; ?>
+</body>
+</html>

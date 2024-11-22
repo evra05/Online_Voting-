@@ -1,0 +1,197 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the form stays vertically centered */
+}
+
+/* Register Container */
+.register-container {
+    background-color: #ffffff;
+    padding: 40px 60px 40px 60px; /* Consistent padding */
+    width: 90%;
+    max-width: 550px; /* Wider container for better readability */
+    border-radius: 12px; /* Rounded corners for aesthetics */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Consistent spacing between elements */
+    animation: fadeIn 0.5s ease-in-out;
+    margin: 30px auto; /* Add vertical margin for better spacing */
+}
+
+/* Heading */
+.register-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form Wrapper Styling */
+.form-wrapper {
+    width: 100%; /* Full width */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align everything to the left */
+    gap: 10px; /* Consistent spacing between elements */
+}
+
+/* Label Styling */
+.form-wrapper label {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #444;
+    text-align: left !important; /* Force left alignment */
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Ensure label behaves like a block element */
+    width: 100%; /* Make sure label spans full width */
+}
+
+/* Input and Select Styling */
+.form-wrapper input[type="text"],
+.form-wrapper input[type="password"],
+.form-wrapper button {
+    width: 300px; /* Full width to match the container */
+    padding: 10px; /* Uniform padding */
+    border-radius: 8px; /* Smooth corners */
+    font-size: 1rem; /* Consistent text size */
+    border: 1px solid #ddd; /* Light border for inputs */
+    background-color: #f9f9f9; /* Subtle background color */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Input Focus Styling */
+.form-wrapper input:focus{
+    border-color: #5e72e4; /* Highlighted border color on focus */
+    background-color: #ffffff; /* White background on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Adjust Gap Between Fields */
+.form-wrapper {
+    width: 300px;
+    margin-bottom: 10px; /* Space below the dropdown */
+}
+
+/* Button Styling */
+.form-wrapper button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 12px 0; /* Adjust height */
+    width: 100%; /* Full width to match inputs */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Add spacing above the button */
+}
+
+.form-wrapper button:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Slight hover effect */
+}
+
+/* General Input and Select Styling */
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%; /* Full width for consistency */
+    padding: 12px; /* Same padding for inputs and dropdown */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Consistent font size */
+    border: 1px solid #ddd; /* Light border for all fields */
+    background-color: #f9f9f9; /* Subtle background */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #5e72e4; /* Highlighted border color on focus */
+    background-color: #ffffff; /* White background on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Modern Select Container */
+.modern-select {
+    width: 320px; /* Match the container width */
+    margin-bottom: 15px; /* Add spacing below the dropdown */
+}
+
+/* Dropdown Element Styling */
+.modern-select select {
+    appearance: none; /* Remove default browser styling */
+    background: #fff url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNzE3MTcxIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDE2LjVsLTctNyAxbDEuNCAxLjRMMTIgMTQuNmw1LjYtNS4ybDEuNCAxLjQtNyA3eiIvPjwvc3ZnPg==') no-repeat right 10px center; /* Add a dropdown icon */
+    background-size: 16px;
+    border-radius: 8px;
+    padding-right: 40px; /* Add space for the dropdown icon */
+}
+
+
+/* Password Container */
+.password-container {
+    position: relative;
+    width: 100%; /* Match other inputs */
+    margin-bottom: 10px; /* Space below password field */
+}
+
+.password-container input {
+    width: 100%; /* Full width for input */
+    padding-right: 40px; /* Space for the toggle icon */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.password-container .toggle-password:hover {
+    color: #333;
+}
+
+
+/* Back Icon Styling */
+.back-icon {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.back-icon img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+}
+
